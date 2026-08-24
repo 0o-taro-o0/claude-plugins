@@ -1,0 +1,14 @@
+{
+  "name": "taro-plugins",
+  "description": "bet-edge-finder で実証済みの運用一式を配布する個人マーケットプレイス",
+  "owner": {
+    "name": "0o-taro-o0"
+  },
+  "plugins": [
+    {
+      "name": "workflow",
+      "source": "./plugins/workflow",
+      "description": "指揮役・実装役・レビュー役の3役でプルリクエストを回す開発体制の一式。依頼と報告の書式5つ、CLAUDE.md と CONTRIBUTING.md の雛形、Issue テンプレート2種を含む"
+    }
+  ]
+}
