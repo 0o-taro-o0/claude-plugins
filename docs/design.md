@@ -58,13 +58,15 @@ Create and distribute a plugin marketplace)で確認した形式に従う。
 
 1. `docs/backlog.csv` への言及(id 参照、「backlog.csv へ書き足す」「backlog へ回す」等)は、
    すべて GitHub Issue への起票と Issue 番号の参照に置き換える(変更点1)。
-   該当箇所: CLAUDE.md「判断を仰ぐこと」末尾と「進め方」、CONTRIBUTING.md の参照先表、
+   該当箇所: CLAUDE.md「判断を仰ぐこと」末尾と「進め方」、CONTRIBUTING.md の参照先表と
+   「文書作成」の「状態を持つのは docs/backlog.csv だけである」、
    implementation-request の参考欄、review-comment の「推奨」の扱い、
    decision-request の注意事項、work-report の成果物欄・「レビューの指摘と対応」例・注意事項。
 2. `docs/templates/<書式>.md` への参照は、対応するスキル呼び出し
    (`/workflow:work-report` など)に置き換える(書式のスキル化に伴う変換)。
    該当箇所: CLAUDE.md「進め方」の2件、CONTRIBUTING.md「作業の流れ」手順1・3・4・8の4件、
-   同「参照先」表の「依頼と報告の書式」の行(スキル5つの一覧に置き換える)。
+   同「参照先」表の「依頼と報告の書式」の行(スキル5つの一覧に置き換える)、
+   work-report 注意事項の decision-request 参照(スキル呼び出しに置き換える)。
 
 ### 対応表
 
