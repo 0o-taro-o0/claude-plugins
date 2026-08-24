@@ -28,8 +28,9 @@ disable-model-invocation: true
 
 ## 起票
 
-書式を埋めたら、Issue テンプレート「判断依頼」を使って GitHub Issue として起票する。
-起票した Issue を正とし、判断の結果も Issue に残す。
+書式を埋めたら、GitHub Issue として起票する。起票した Issue を正とし、判断の結果も
+Issue に残す。Web から起票する場合は Issue テンプレート「判断依頼」を使う。
+コマンドから起票する場合は、書式を埋めた本文をそのまま渡す(テンプレートは適用されない)。
 
     gh issue create --title "判断依頼: <題名>" --body-file <書式を埋めたファイル>
 
