@@ -51,16 +51,33 @@ Create and distribute a plugin marketplace)で確認した形式に従う。
 
 移植元は `C:\Users\TaroTSUCHIYA\develop\ai\bet-edge-finder` の実物である。
 
+### 共通の置換規則
+
+移植原則の2変更点と書式のスキル化に伴い、全配布物(雛形2枚とスキル5つ)へ
+次の置換を一律に適用する。対応表の「原文のまま」は、この規則の適用後を指す。
+
+1. `docs/backlog.csv` への言及(id 参照、「backlog.csv へ書き足す」「backlog へ回す」等)は、
+   すべて GitHub Issue への起票と Issue 番号の参照に置き換える(変更点1)。
+   該当箇所: CLAUDE.md「判断を仰ぐこと」末尾と「進め方」、CONTRIBUTING.md の参照先表、
+   implementation-request の参考欄、review-comment の「推奨」の扱い、
+   decision-request の注意事項、work-report の成果物欄・「レビューの指摘と対応」例・注意事項。
+2. `docs/templates/<書式>.md` への参照は、対応するスキル呼び出し
+   (`/workflow:work-report` など)に置き換える(書式のスキル化に伴う変換)。
+   該当箇所: CLAUDE.md「進め方」の2件、CONTRIBUTING.md「作業の流れ」手順1・3・4・8の4件、
+   同「参照先」表の「依頼と報告の書式」の行(スキル5つの一覧に置き換える)。
+
+### 対応表
+
 | 移植元 | 配布物 | 形 |
 |---|---|---|
-| `CLAUDE.md` | `templates/CLAUDE.md` | 雛形。固有部分を欄に置換し、`docs/backlog.csv` への言及を GitHub Issue に置換 |
+| `CLAUDE.md` | `templates/CLAUDE.md` | 雛形。固有部分を欄に置換。「進め方」の backlog.csv 直接 push の例外規定は、Issue 一本化で対象のファイルが消滅するため削除する |
 | `CONTRIBUTING.md` | `templates/CONTRIBUTING.md` | 雛形。同上。作業の流れ・役割3分担・ラベル4状態・コミット規約は原文のまま移す |
 | `docs/templates/implementation-request.md` | `skills/implementation-request/SKILL.md` | 呼び出し用スキル。書式と注意事項を原文のまま含める |
-| `docs/templates/review-request.md` | `skills/review-request/SKILL.md` | 同上 |
-| `docs/templates/review-comment.md` | `skills/review-comment/SKILL.md` | 同上。「推奨」の退避先を backlog.csv から Issue 起票に置換 |
+| `docs/templates/review-request.md` | `skills/review-request/SKILL.md` | 同上。ただし注意事項3点目の `docs/DATA_INVENTORY.md` 固有規定は削除する。スキルは配布物でありプロジェクト側が欄を埋められないため、固有の差し戻し基準はスキルに持たせない |
+| `docs/templates/review-comment.md` | `skills/review-comment/SKILL.md` | 同上 |
 | `docs/templates/decision-request.md` | `skills/decision-request/SKILL.md` | 同上。書式を埋めたうえで GitHub Issue として起票する手順を加える(変更点2) |
-| `docs/templates/work-report.md` | `skills/work-report/SKILL.md` | 同上。成果物欄の backlog id を Issue 番号に置換 |
-| `docs/backlog.csv`(廃止) | `templates/ISSUE_TEMPLATE/task.md` | 課題起票用の Issue テンプレート。backlog.csv の列(概要・詳細・方針)を項目として引き継ぐ |
+| `docs/templates/work-report.md` | `skills/work-report/SKILL.md` | 同上 |
+| `docs/backlog.csv`(廃止) | `templates/ISSUE_TEMPLATE/task.md` | 課題起票用の Issue テンプレート。7列のうち概要・詳細・方針を項目として引き継ぐ。id と状態は Issue 番号と open/close が代替する。カテゴリと重要度は項目にせず落とす(必要になれば Issue ラベルで代替できる) |
 | `docs/templates/decision-request.md`(併用) | `templates/ISSUE_TEMPLATE/decision-request.md` | 判断依頼用の Issue テンプレート。書式の項目は decision-request と同一 |
 | `CONTRIBUTING.md`「プルリクエストの状態」 | ラベル作成手順 | `実装中` `レビュー中` `判断待ち` `マージ可` の4種を `gh label create` で作る手順。`templates/CONTRIBUTING.md` の導入手順に記す |
 
@@ -75,7 +92,7 @@ Issue テンプレートは、適用先プロジェクトの `.github/ISSUE_TEMP
 | 欄 | 移植元での中身(固有の実例) |
 |---|---|
 | 絶対ルールの中身 | 時系列リークの禁止、テスト期間は一度だけ |
-| 判断を仰ぐことの固有例 | 収集の停止、`experiments/` の改変、封印、評価指標の変更 |
+| 判断を仰ぐことの固有例 | 収集の停止、`experiments/` の記録の改変、評価指標の変更 |
 | レビュー役を2人にする条件 | 絶対ルール関連、封印の監査証跡、本番データの削除 |
 | 検証コマンド | `uv run ruff check .`、`uv run pytest -q`、cfn-lint ほか |
 | コミット範囲の候補 | `collect` `infra` `features` |
