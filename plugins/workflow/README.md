@@ -1,6 +1,17 @@
-# 導入手順
+# workflow プラグイン
 
-プラグイン workflow の雛形から、この開発体制をプロジェクトへ導入するときに一度だけ行う。
+指揮役・実装役・レビュー役の3役でプルリクエストを回す開発体制の一式。
+依頼と報告の書式のスキル、`CLAUDE.md` と `CONTRIBUTING.md` の雛形、
+Issue テンプレート2種を含む。
+
+## 導入
+
+    /plugin marketplace add 0o-taro-o0/claude-plugins
+    /plugin install workflow@taro-plugins
+
+## プロジェクトへの適用
+
+適用先のプロジェクトで一度だけ行う。
 
 1. 雛形2枚(`templates/CLAUDE.md`、`templates/CONTRIBUTING.md`)をプロジェクトルートへ複写し、`<>` の欄を埋める
 2. Issue テンプレート2種(`templates/ISSUE_TEMPLATE/task.md`、同 `decision-request.md`)を `.github/ISSUE_TEMPLATE/` へ複写する
