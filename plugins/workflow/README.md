@@ -27,7 +27,7 @@ Issue テンプレート2種を含む。
     gh label create 判断依頼 --color D4C5F9 --description "オーナーへ判断を求める"
     gh label create 重要度:高 --color B60205 --description "放置すると実害が出る"
     gh label create 重要度:中 --color E36209 --description "進行を妨げる"
-    gh label create 重要度:低 --color BFBFBF --description "改善"
+    gh label create 重要度:低 --color BFBFBF --description "放置しても支障はないが、直すと品質が上がる"
 
 ラベルの色は、このコマンドの `--color` が唯一の定義箇所である。複数のリポジトリで
 色を揃える場合も、この手順の色をそのまま使う。既存のラベルと色が異なる場合は
