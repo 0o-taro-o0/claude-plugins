@@ -1,6 +1,5 @@
 ---
 description: 実装依頼の書式。指揮役が実装役へ作業を渡すときに使う
-disable-model-invocation: true
 ---
 
 # 実装依頼

@@ -1,6 +1,5 @@
 ---
 description: レビュー依頼の書式。指揮役がレビュー役へレビューを依頼するときに使う
-disable-model-invocation: true
 ---
 
 # レビュー依頼

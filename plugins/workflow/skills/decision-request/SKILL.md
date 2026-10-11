@@ -1,6 +1,5 @@
 ---
 description: 判断依頼の書式。オーナーへ判断を求めるときに使い、GitHub Issue として起票する
-disable-model-invocation: true
 ---
 
 # 判断依頼

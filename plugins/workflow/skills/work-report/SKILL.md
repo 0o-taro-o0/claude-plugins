@@ -1,6 +1,5 @@
 ---
 description: 作業報告の書式。指揮役がオーナーへ報告するときに使う
-disable-model-invocation: true
 ---
 
 # 作業報告
