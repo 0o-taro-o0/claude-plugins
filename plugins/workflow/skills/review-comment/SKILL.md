@@ -1,6 +1,5 @@
 ---
 description: 指摘の書式。レビュー役がプルリクエストへ投稿するときに使う
-disable-model-invocation: true
 ---
 
 # 指摘の書式
