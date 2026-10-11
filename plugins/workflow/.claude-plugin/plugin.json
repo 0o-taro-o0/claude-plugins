@@ -1,7 +1,7 @@
 {
   "name": "workflow",
   "description": "指揮役・実装役・レビュー役の3役でプルリクエストを回す開発体制の一式。依頼と報告の書式5つ、CLAUDE.md と CONTRIBUTING.md の雛形、Issue テンプレート2種を含む",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "author": {
     "name": "0o-taro-o0"
   }
